@@ -1,6 +1,7 @@
 import logo from "../../imgs/logo.svg"
 import {NavLink} from "react-router-dom";
 import LinkButtons from "./LinkButtons";
+import styles from "./SiteHeader.module.scss"
 
 type userInfoProps = {
     isLogged:boolean;
@@ -9,7 +10,7 @@ type userInfoProps = {
 
 const SiteHeader = ({isLogged, userName} : userInfoProps) => {
     return(
-        <div>
+        <div className={styles.headerWrapper}>
             <img src={logo} alt="mainlogo" width="4%"/>
             <div>
                 {LinkButtons.map(item => (

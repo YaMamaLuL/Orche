@@ -1,6 +1,6 @@
 import vkLogoLink from "../../imgs/vkLogo.svg"
-const tgLogoLink = "public/telegramLogo.svg"
-const discordLogoLink = "public/discordLogo.svg"
+import tgLogoLink from "../../imgs/telegramLogo.svg"
+import discordLogoLink from "../../imgs/discordLogo.svg"
 
 const SocialMediaLinks = [
     {
@@ -8,11 +8,11 @@ const SocialMediaLinks = [
         ref:"vk.com/eldonger"
     },
     {
-        logo:vkLogoLink,
+        logo:tgLogoLink,
         ref:"vk.com/eldonger"
     },
     {
-        logo:vkLogoLink,
+        logo:discordLogoLink,
         ref:"vk.com/eldonger"
     }
 ]
