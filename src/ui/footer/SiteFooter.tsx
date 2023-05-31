@@ -13,6 +13,7 @@ const SiteFooter = () => {
                         <img src={item.logo} alt="socialmedialogo" width="4%"/>
                     </a>)}
             </div>
+            <div>asdasd</div>
         </div>
     )
 }
