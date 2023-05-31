@@ -12,14 +12,12 @@ const SiteHeader = ({isLogged, userName} : userInfoProps) => {
     return(
         <div className={styles.headerWrapper}>
             <img src={logo} alt="mainlogo" width="4%"/>
-            <div>
+            <div className={styles.pageLinks}>
                 {LinkButtons.map(item => (
-                    <NavLink to={item.ref}>{item.title}</NavLink>
+                    <NavLink className={styles.link} to={item.ref}>{item.title}</NavLink>
                 ))}
-            </div>
-            <div>
-                <NavLink to="/login">Вход</NavLink>
-                <NavLink to="/registration">Регистрация</NavLink>
+                <NavLink className={styles.logLink} to="/login">Вход</NavLink>
+                <NavLink className={styles.regLink} to="/registration">Регистрация</NavLink>
             </div>
         </div>
     )

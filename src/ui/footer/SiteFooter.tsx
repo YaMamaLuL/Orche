@@ -5,15 +5,13 @@ import styles from "./SiteFooter.module.scss"
 const SiteFooter = () => {
     return (
         <div className={styles.footerWrapper}>
-            <img src={logo} alt="logoImg" width="2%"/>
-            <div>copyright in next life</div>
-            <div>
-                {socialMediaLinks.map(item=>
-                    <a href={item.ref}>
-                        <img src={item.logo} alt="socialmedialogo" width="4%"/>
-                    </a>)}
-            </div>
-            <div>asdasd</div>
+            <img src={logo} alt="logoImg" width="4%"/>
+            <p>copyright in next life</p>
+            <div>{socialMediaLinks.map(item=>
+                <a href={item.ref} className={styles.anchors}>
+                    <img src={item.logo} width="8%"/>
+                </a>)}</div>
+
         </div>
     )
 }
