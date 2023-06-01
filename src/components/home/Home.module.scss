@@ -1,0 +1,33 @@
+.mainWrapper{
+  height: 200vh;
+  margin: 0 2%;
+
+  .slogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: left;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-image: url("../../imgs/main_page_image.svg");
+    background-size: cover;
+    background-position: right;
+
+    .mainPageButton{
+      border-radius: 10px;
+      width: fit-content;
+      padding: 10px;
+      font-size: 20px;
+      background-color: #2D9275;
+      color: white;
+      text-decoration: none;
+    }
+
+    div{
+      margin: auto 0;
+      font-size: 70px;
+      color: #444444;
+      font-family: MullerMedium;
+    }
+  }
+}

@@ -11,13 +11,13 @@ type userInfoProps = {
 const SiteHeader = ({isLogged, userName} : userInfoProps) => {
     return(
         <div className={styles.headerWrapper}>
-            <img src={logo} alt="mainlogo" width="4%"/>
-            <div className={styles.pageLinks}>
+            <a href="/home" className={styles.anchor}><img src={logo} alt="mainlogo" width="100%"/></a>
+            <div className={styles.links}>
                 {LinkButtons.map(item => (
                     <NavLink className={styles.link} to={item.ref}>{item.title}</NavLink>
                 ))}
-                <NavLink className={styles.logLink} to="/login">Вход</NavLink>
-                <NavLink className={styles.regLink} to="/registration">Регистрация</NavLink>
+                <button className={styles.logLink}>вход</button>
+                <NavLink className={styles.regLink} to="/registration">регистрация</NavLink>
             </div>
         </div>
     )

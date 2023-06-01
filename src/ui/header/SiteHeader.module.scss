@@ -1,49 +1,60 @@
-.headerWrapper{
+$main-color: #2D9275;
+
+.headerWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin:0 1%;
-  border-bottom: 1px solid lightseagreen;
+  align-items: center;
+  margin: 0 2%;
+  height: 10vh;
 
-  .pageLinks{
-    margin: 1% 0%;
+  .anchor{height: 4%; width: 4%; margin-top: -8vh }
+
+  .links{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:30%
-  };
+    justify-content: end;
+    width: 50%;
 
-  .link{
-    padding-top: 2px;
-    font-size: 20px;
-    text-decoration: none;
-    color: black};
-    text-align: center;
+    .link{
+      font-family: MullerRegular;
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+      margin-right: 8%;
 
-  .logLink{
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    width:12%;
-    padding-top: 2px;
-    border-radius: 10px;
-    background-color: lightseagreen;
-    text-align: center;
-  };
+    }
 
-  .regLink{
-    font-size: 20px;
-    text-align: center;
-    width: 24%;
-    text-decoration: none;
-    color: black;
-    border: 1px solid lightseagreen;
-    border-radius: 10px;
-    padding-top: 2px;
-  }
+    .link:hover{
+      margin-bottom: -3px;
+      border-bottom: 3px solid $main-color;
+    }
 
-  :nth-child(3){
-    padding-right: 18px;
-    border-right: 3px solid lightseagreen;
+    .logLink{
+      font-size: 20px;
+      font-family: MullerRegular;
+      margin-right: 4%;
+      text-decoration: none;
+      color:white;
+      border-radius: 10px;
+      margin-top: -1%;
+      padding: 5px 10px 7px 10px;
+      border:1px solid $main-color;
+      background-color: $main-color;
+    }
+
+    button:hover{color: $main-color; background-color: white;}
+
+    .regLink{
+      color: black;
+      font-size: 20px;
+      font-family: MullerRegular;
+      margin-right: 4%;
+      text-decoration: none;
+    }
+
+    .regLink:hover{
+      margin-bottom: -3px;
+      border-bottom: 3px solid $main-color;
+    }
   }
 }

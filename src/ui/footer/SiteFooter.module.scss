@@ -1,12 +1,24 @@
 .footerWrapper{
-
-  width: 98%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  vertical-align: bottom;
-  margin: 0 1%;
-  .images{padding-right: -50px ;margin-right: -50%; img{padding-right: -50px}}
+  margin: 0 2%;
+  align-items: center;
 
-  div{border:1px solid black}
+  p{
+    font-size: 20px;
+    font-family: MullerRegular;
+    margin-right: auto;
+  }
+
+  .socialLinks{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+  }
+
+  .anchor{width:3vw; height: 3vh; margin-right: 10px; margin-bottom: 12%}
+
+  img:hover{opacity: 0.5}
 }

@@ -1,14 +1,14 @@
 const LinkButtons = [
     {
-     title:"Документация",
+     title:"документация",
      ref: "/documentation"
     },
     {
-       title: "Блог",
+       title: "блог",
        ref: "/blog"
     },
     {
-        title: "Заглушка",
+        title: "заглушка",
         ref: "/*"
     }
 ]
