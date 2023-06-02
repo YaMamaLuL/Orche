@@ -1,0 +1,29 @@
+.footerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 2%;
+  align-items: center;
+}
+.footerWrapper p {
+  font-size: 20px;
+  font-family: MullerRegular;
+  margin-right: auto;
+}
+.footerWrapper .socialLinks {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+}
+.footerWrapper .anchor {
+  width: 2vw;
+  height: 2vh;
+  margin-right: 10px;
+  margin-bottom: 12%;
+}
+.footerWrapper img:hover {
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=SiteFooter.module.css.map */

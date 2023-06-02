@@ -11,21 +11,24 @@ const Home = () =>{
             <SiteHeader isLogged={false} userName={"nothing"}/>
             <div className={styles.mainWrapper}>
                 <div className={styles.slogan}>
-                    <div>Создайте свое приложение,<br/> а запуск оставьте на нас</div>
+                    <p>Создайте свое приложение,<br/> а запуск оставьте на нас</p>
                     <NavLink className={styles.mainPageButton} to="/register">Регистрейшон нау</NavLink>
                 </div>
                 <div className={styles.infoWrapper}>
                     <h3>Как это работает?</h3>
                     <div className={styles.howItWorks}>
-                        <ul>
+                        <ul className={styles.descriptionNumerator}>{Descriptions.map(item =><li key="num">{item.id}</li>)}</ul>
+                        <ul className={styles.descriptions}>
                             {Descriptions.map(item=><li key={item.id}>{item.title}</li>)}
                         </ul>
                     </div>
-                    <div className={styles.duties}>
+                    <div className={styles.dutiesBlock}>
                         <h3>В обязанности оркестратора будет входить</h3>
-                        <ul>
-                            {Duties.map(item=><li key={item.id}>{item.title}</li>)}
-                        </ul>
+                        <div className={styles.duties}>
+                            <ul>
+                                {Duties.map(item=><li key={item.id}>{item.title}</li>)}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

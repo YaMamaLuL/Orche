@@ -1,0 +1,58 @@
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2%;
+  height: 10vh;
+}
+.headerWrapper .anchor {
+  height: 4%;
+  width: 4%;
+  margin-top: -8vh;
+}
+.headerWrapper .links {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+.headerWrapper .links .link {
+  font-family: MullerRegular;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  margin-right: 8%;
+}
+.headerWrapper .links .link:hover {
+  margin-bottom: -3px;
+  border-bottom: 3px solid #2D9275;
+}
+.headerWrapper .links .logLink {
+  font-size: 20px;
+  font-family: MullerRegular;
+  margin-right: 4%;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  margin-top: -0.5%;
+  padding: 5px 10px 7px 10px;
+  border: 1px solid #2D9275;
+  background-color: #2D9275;
+}
+.headerWrapper .links button:hover {
+  color: #2D9275;
+  background-color: white;
+}
+.headerWrapper .links .regLink {
+  color: black;
+  font-size: 20px;
+  font-family: MullerRegular;
+  margin-right: 4%;
+  text-decoration: none;
+}
+.headerWrapper .links .regLink:hover {
+  margin-bottom: -3px;
+  border-bottom: 3px solid #2D9275;
+}
+
+/*# sourceMappingURL=SiteHeader.module.css.map */

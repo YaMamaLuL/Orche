@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './fonts/Muller/MullerMedium.ttf'
 import "./fonts/Muller/MullerRegular.ttf"
+import "./fonts/Muller/MullerLight.ttf"
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

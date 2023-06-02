@@ -1,0 +1,70 @@
+.mainWrapper {
+  height: 200vh;
+  margin: 0 2%;
+}
+.mainWrapper .slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url("../../imgs/main_page_image.svg");
+  background-size: cover;
+  background-position: right;
+}
+.mainWrapper .slogan .mainPageButton {
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #2D9275;
+  color: white;
+  text-decoration: none;
+}
+.mainWrapper .slogan p {
+  margin: auto 0;
+  font-size: 70px;
+  color: #444444;
+  font-family: MullerMedium;
+}
+
+.infoWrapper h3 {
+  font-size: 35px;
+  font-family: "MullerMedium";
+}
+.infoWrapper .howItWorks ul.descriptionNumerator {
+  margin-top: 0;
+  font-size: 70px;
+  font-family: "MullerLight";
+  padding-left: 20px;
+  margin-bottom: -3vh;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.infoWrapper .howItWorks ul.descriptionNumerator li {
+  z-index: 0;
+  width: 15vw;
+  text-align: start;
+}
+.infoWrapper .howItWorks ul.descriptions {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.infoWrapper .howItWorks ul.descriptions li {
+  z-index: -1;
+  font-size: 20px;
+  font-family: "MullerLight";
+  color: white;
+  padding: 40px 20px 0px 20px;
+  width: 14vw;
+  background-color: #2D9275;
+  border-radius: 10px;
+  height: 12vh;
+}
+
+/*# sourceMappingURL=Home.module.css.map */

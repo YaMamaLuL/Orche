@@ -1,3 +1,5 @@
+$main-color: #2D9275;
+
 .mainWrapper{
   height: 200vh;
   margin: 0 2%;
@@ -23,11 +25,49 @@
       text-decoration: none;
     }
 
-    div{
+    p{
       margin: auto 0;
       font-size: 70px;
       color: #444444;
       font-family: MullerMedium;
+    }
+  }
+}
+
+.infoWrapper{
+  h3{font-size: 35px; font-family: "MullerMedium"}
+  .howItWorks{
+    ul.descriptionNumerator{
+      margin-top: 0;
+      font-size: 70px;
+      font-family: "MullerLight";
+      padding-left: 20px;
+      margin-bottom: -3vh;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+
+      li{z-index: 0; width: 15vw; text-align: start;}
+    }
+
+    ul.descriptions{
+      padding-left: 0;
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      justify-content: space-between;
+
+      li{
+        z-index: -1;
+        font-size: 20px;
+        font-family: "MullerLight";
+        color: white;
+        padding: 40px 20px 0px 20px;
+        width: 14vw;
+        background-color: $main-color;
+        border-radius: 10px;
+        height: 12vh;
+      }
     }
   }
 }
