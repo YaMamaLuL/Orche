@@ -40,6 +40,7 @@
   background-color: #2D9275;
 }
 .headerWrapper .links button:hover {
+  cursor: pointer;
   color: #2D9275;
   background-color: white;
 }

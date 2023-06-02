@@ -5,15 +5,15 @@ const LogIn = () =>{
     return(
         <div className={styles.logWrapper}>
             <SiteHeader isLogged={false} userName="nothing" />
-            <div className={styles.loginPage}>
-                <h3>Добрый вечер, регаемся, пожлауйста</h3>
-                <div className={styles.logForm}>
+            <div className={styles.formWrapper}>
+                <form className={styles.loginForm}>
+                    <h3>Вход в личный кабинетик</h3>
                     <p>Адрес электронной почты</p>
-                    <input></input>
+                    <input className={styles.mailInput}/>
                     <p>Пароль</p>
-                    <input></input><br/>
-                    <button>Вход</button>
-                </div>
+                    <input/>
+                    <button>Войти</button>
+                </form>
             </div>
             <SiteFooter></SiteFooter>
         </div>

@@ -57,14 +57,39 @@
 }
 .infoWrapper .howItWorks ul.descriptions li {
   z-index: -1;
-  font-size: 20px;
+  font-size: 2vh;
   font-family: "MullerLight";
   color: white;
   padding: 40px 20px 0px 20px;
   width: 14vw;
   background-color: #2D9275;
   border-radius: 10px;
-  height: 12vh;
+  height: 16vh;
+}
+
+.dutiesBlock {
+  margin-top: 6vh;
+  border-radius: 10px;
+  border: 2px solid #444444;
+}
+.dutiesBlock h3 {
+  color: #2D9275;
+  margin-left: 1vw;
+}
+.dutiesBlock .duties {
+  background-image: url("../../imgs/duties_image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.dutiesBlock .duties ul {
+  margin-bottom: 6vh;
+}
+.dutiesBlock .duties ul li {
+  font-family: MullerRegular;
+  font-size: 3vh;
+  margin-bottom: 2vh;
+  list-style-image: url("../../imgs/list_squares.svg");
 }
 
 /*# sourceMappingURL=Home.module.css.map */
