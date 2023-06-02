@@ -21,12 +21,18 @@
   background-color: #2D9275;
   color: white;
   text-decoration: none;
+  border: 1px solid transparent;
+}
+.mainWrapper .slogan .mainPageButton:hover {
+  color: #2D9275;
+  background-color: white;
+  border: 1px solid #2D9275;
 }
 .mainWrapper .slogan p {
-  margin: auto 0;
   font-size: 70px;
   color: #444444;
   font-family: MullerMedium;
+  margin: auto 0;
 }
 
 .infoWrapper h3 {
@@ -34,7 +40,6 @@
   font-family: "MullerMedium";
 }
 .infoWrapper .howItWorks ul.descriptionNumerator {
-  margin-top: 0;
   font-size: 70px;
   font-family: "MullerLight";
   padding-left: 20px;
@@ -75,6 +80,7 @@
 .dutiesBlock h3 {
   color: #2D9275;
   margin-left: 1vw;
+  font-size: 4vh;
 }
 .dutiesBlock .duties {
   background-image: url("../../imgs/duties_image.svg");

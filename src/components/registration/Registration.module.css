@@ -1,0 +1,19 @@
+.formWrapper {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 83vh;
+}
+.formWrapper .regForm {
+  width: 25vw;
+  height: 50vh;
+  border: 2px solid #444444;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=Registration.module.css.map */

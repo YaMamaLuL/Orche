@@ -21,8 +21,8 @@
   font-family: "MullerMedium";
   border-bottom: 1px solid black;
   font-size: 2vh;
-  margin-top: -8vh;
-  margin-bottom: 10vh;
+  margin-top: -4vh;
+  margin-bottom: 6vh;
   color: #444444;
 }
 .formWrapper .loginForm p {
@@ -30,6 +30,9 @@
   font-size: 1.5vh;
   align-self: start;
   margin-left: 2.3vw;
+}
+.formWrapper .loginForm p :nth-last-child(1) {
+  color: red;
 }
 .formWrapper .loginForm input {
   width: 20vw;
@@ -51,6 +54,19 @@
 .formWrapper .loginForm button:hover {
   color: #2D9275;
   background-color: white;
+}
+.formWrapper .loginForm .socialMedias {
+  width: 25vw;
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.formWrapper .loginForm .socialMedias img {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #2D9275;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=LogInHeader.module.css.map */
