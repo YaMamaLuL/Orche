@@ -59,15 +59,44 @@ $main-color: #2D9275;
 
       li{
         z-index: -1;
-        font-size: 20px;
+        font-size: 2vh;
         font-family: "MullerLight";
         color: white;
         padding: 40px 20px 0px 20px;
         width: 14vw;
         background-color: $main-color;
         border-radius: 10px;
-        height: 12vh;
+        height: 16vh;
       }
+    }
+  }
+}
+
+.dutiesBlock{
+  margin-top: 6vh;
+  border-radius:10px;
+  border:2px solid #444444;
+
+  h3{
+    color: $main-color;
+    margin-left: 1vw;
+  }
+
+  .duties{
+    background-image: url("../../imgs/duties_image.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    ul{
+      margin-bottom: 6vh;
+
+
+      li{
+        font-family: MullerRegular;
+        font-size:3vh;
+        margin-bottom: 2vh;
+        list-style-image: url("../../imgs/list_squares.svg");}
     }
   }
 }
