@@ -4,6 +4,7 @@ import Home from "./components/home/Home"
 import Documentation from "./components/documentation/Documentation";
 import LogIn from "./components/login/LogIn";
 import Registration from "./components/registration/Registration";
+import Blog from "./components/blog/Blog";
 import PersonalOffice from "./components/personalOffice/PersonalOffice";
 
 const App = () => {
@@ -19,6 +20,10 @@ const App = () => {
         {
           path: "/documentation",
           element: <Documentation/>
+        },
+        {
+            path: "/blog",
+            element: <Blog/>
         },
         {
             path: "/login",

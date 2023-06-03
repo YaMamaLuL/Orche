@@ -43,7 +43,7 @@
   font-size: 70px;
   font-family: "MullerLight";
   padding-left: 20px;
-  margin-bottom: -3vh;
+  margin-bottom: -5vh;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -80,6 +80,7 @@
 .dutiesBlock h3 {
   color: #2D9275;
   margin-left: 1vw;
+  margin-bottom: 2vh;
   font-size: 4vh;
 }
 .dutiesBlock .duties {

@@ -1,19 +1,84 @@
 .formWrapper {
-  border: 1px solid black;
+  margin-top: 2vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 83vh;
 }
 .formWrapper .regForm {
-  width: 25vw;
-  height: 50vh;
+  width: 35vw;
+  height: 60vh;
   border: 2px solid #444444;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.formWrapper .regForm h3 {
+  font-family: MullerMedium;
+  font-size: 2.5vh;
+  border-bottom: 1px solid #444444;
+  margin-top: -1.5vh;
+  margin-bottom: 1vh;
+}
+.formWrapper .regForm p {
+  font-family: MullerRegular;
+  font-size: 2vh;
+  margin-left: 8.3vw;
+  align-self: start;
+}
+.formWrapper .regForm p span {
+  color: red;
+}
+.formWrapper .regForm button {
+  border: 1px solid #2D9275;
+  border-radius: 5px;
+  padding: 1vh 1vw;
+  font-family: MullerRegular;
+  font-size: 2vh;
+  color: white;
+  background-color: #2D9275;
+}
+.formWrapper .regForm button:hover {
+  cursor: pointer;
+  color: #2D9275;
+  background-color: white;
+}
+.formWrapper .regForm input {
+  border: 1px solid #444444;
+  border-radius: 5px;
+  width: 18vw;
+  height: 3vh;
+  margin-bottom: 1vh;
+}
+.formWrapper .regForm input.lastInput {
+  margin-bottom: 5vh;
+}
+
+h3 {
+  font-family: MullerMedium;
+  margin-bottom: -1vh;
+  color: #2D9275;
+  color: #444444;
+}
+
+.socialMedias {
+  height: 9vh;
+  border: 2px solid #444444;
+  border-radius: 10px;
+  width: 25vw;
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.socialMedias img {
+  cursor: pointer;
+  padding: 1px;
+  border-radius: 10px;
+  width: 4vw;
 }
 
 /*# sourceMappingURL=Registration.module.css.map */

@@ -10,6 +10,12 @@
   font-family: MullerRegular;
   margin-right: auto;
 }
+.footerWrapper .siteLogo:hover {
+  content: url("../../imgs/urfulogo.png");
+  height: 6vh;
+  width: 6vh;
+  padding-right: 0.38vw;
+}
 .footerWrapper .socialLinks {
   display: flex;
   flex-direction: row;

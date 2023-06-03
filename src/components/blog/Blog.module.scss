@@ -1,0 +1,41 @@
+$main-color: #2D9275;
+
+.blogWrapper{
+  height:83vh;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .newsData{
+    list-style-type: none;
+    border:1px solid #444444;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vw;
+    padding: 0.1vh 1vw;
+
+    button{
+      cursor: pointer;
+      font-family: MullerRegular;
+      font-size: 2vh;
+      margin-top: 2vh;
+      padding: 0.5vh;
+      border: 2px solid $main-color;
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    button:focus{background-color: $main-color; color: white}
+
+  }
+
+  .newText{
+    font-family: MullerRegular;
+    font-size: 2vh;
+    padding:2vh 2vw;
+    border: 1px solid $main-color;
+    border-radius: 10px;
+    width:65vw;
+  }
+}
