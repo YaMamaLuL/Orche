@@ -19,14 +19,15 @@ const Registration = () =>{
                     <p>Пароль <span>*</span></p>
                     <input/>
                     <p>Повторите пароль <span>*</span></p>
-                    <input/>
-                    <div className={styles.socialMedias}>
-                        <img title="will be added later" src={yandexLogo} width="6%"/>
-                        <img title="will be added later" src={googleLogo} width="6%"/>
-                        <img title="will be added later" src={gitLogo} width="6%"/>
-                    </div>
-                    <button>Войти</button>
+                    <input className={styles.lastInput}/>
+                    <button>Регистрейшон</button>
                 </form>
+                <h3>Или воспользуйтесь</h3>
+                <div className={styles.socialMedias}>
+                    <img title="will be added later" src={yandexLogo} width="6%" alt="socialMediaLogo"/>
+                    <img title="will be added later" src={googleLogo} width="6%" alt="socialMediaLogo"/>
+                    <img title="will be added later" src={gitLogo} width="6%" alt="socialMediaLogo"/>
+                </div>
             </div>
             <SiteFooter></SiteFooter>
         </div>

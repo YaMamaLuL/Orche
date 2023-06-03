@@ -2,6 +2,7 @@ $main-color: #2D9275;
 
 .formWrapper{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 83vh;
@@ -23,15 +24,15 @@ $main-color: #2D9275;
     h3{
       font-family: "MullerMedium";
       border-bottom: 1px solid black;
-      font-size: 2vh;
-      margin-top: -4vh;
-      margin-bottom: 6vh;
+      font-size: 2.5vh;
+      margin-top: 0;
+      margin-bottom: 3vh;
       color: #444444;
     }
 
     p{
-      font-family: "MullerLight";
-      font-size: 1.5vh;
+      font-family: "MullerRegular";
+      font-size: 2vh;
       align-self: start;
       margin-left: 2.3vw;
 
@@ -46,36 +47,39 @@ $main-color: #2D9275;
     }
 
     button{
-      font-family: "MullerLight";
-      font-size: 1.5vh;
+      font-family: "MullerRegular";
+      font-size: 2vh;
       color: white;
       background-color: $main-color;
       border:1px solid $main-color;
       border-radius: 5px;
-      width:5vw;
-      height: 3vh;
+      width:5.5vw;
+      height: 3.5vh;
       margin-top: 4vh;
     }
 
     button:hover{
       color: $main-color;
       background-color: white;
-    }
-
-    .socialMedias{
-      width: 25vw;
-      margin-top:4vh;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-
-      img{
-        cursor: pointer;
-        padding: 5px;
-        background-color: $main-color;
-        border-radius: 10px;
-      }
+      cursor: pointer;
     }
   }
 }
 
+.socialMedias{
+  height: 9vh;
+  border: 2px solid #444444;
+  border-radius: 10px;
+  width: 25vw;
+  margin-top:4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  img{
+    cursor: pointer;
+    padding: 1px;
+    border-radius: 10px;
+    width: 4vw;
+  }
+}

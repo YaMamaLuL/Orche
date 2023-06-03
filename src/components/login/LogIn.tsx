@@ -16,13 +16,14 @@ const LogIn = () =>{
                     <input className={styles.mailInput}/>
                     <p>Пароль <span>*</span></p>
                     <input/>
-                    <div className={styles.socialMedias}>
-                        <img title="will be added later" src={yandexLogo} width="6%"/>
-                        <img title="will be added later" src={googleLogo} width="6%"/>
-                        <img title="will be added later" src={gitLogo} width="6%"/>
-                    </div>
                     <button>Войти</button>
                 </form>
+                <h3>Или воспользуйтесь</h3>
+                <div className={styles.socialMedias}>
+                    <img title="will be added later" src={yandexLogo} width="6%" alt="socialMediaLogo"/>
+                    <img title="will be added later" src={googleLogo} width="6%" alt="socialMediaLogo"/>
+                    <img title="will be added later" src={gitLogo} width="6%" alt="socialMediaLogo"/>
+                </div>
             </div>
             <SiteFooter></SiteFooter>
         </div>

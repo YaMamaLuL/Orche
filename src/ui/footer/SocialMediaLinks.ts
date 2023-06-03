@@ -5,15 +5,15 @@ import discordLogoLink from "../../imgs/discordLogo.svg"
 const SocialMediaLinks = [
     {
         logo: vkLogoLink,
-        ref:"vk.com/eldonger"
+        ref:"https://vk.com/eldonger"
     },
     {
         logo:tgLogoLink,
-        ref:"vk.com/eldonger"
+        ref:"https://vk.com/eldonger"
     },
     {
         logo:discordLogoLink,
-        ref:"vk.com/eldonger"
+        ref:"https://vk.com/eldonger"
     }
 ]
 

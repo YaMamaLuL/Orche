@@ -11,6 +11,13 @@
     margin-right: auto;
   }
 
+  .siteLogo:hover{
+      content: url("../../imgs/urfulogo.png");
+      height: 6vh;
+      width: 6vh;
+    padding-right: 0.38vw;
+  }
+
   .socialLinks{
     display: flex;
     flex-direction: row;

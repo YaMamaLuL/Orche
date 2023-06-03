@@ -11,7 +11,7 @@ type userInfoProps = {
 const SiteHeader = ({isLogged, userName} : userInfoProps) => {
     return(
         <div className={styles.headerWrapper}>
-            <a href="/home" className={styles.anchor}><img src={logo} alt="mainlogo" width="100%"/></a>
+            <NavLink to="/home" className={styles.anchor}><img src={logo} alt="mainlogo" width="100%"/></NavLink>
             <div className={styles.links}>
                 {LinkButtons.map(item => (
                     <NavLink className={styles.link} to={item.ref}>{item.title}</NavLink>
