@@ -6,7 +6,7 @@ const Documentation = () =>{
 
     const text = async () =>{
         setAppState("poehali")
-        axios.get("192.168.0.104:3000/api/users", {headers:{"Content-Type":"application/json"}}).then((response) => setAppState(response.statusText))
+        axios.get("http://192.168.0.104:3000/api/users", {headers:{accept: "application/json"}}).then((response) => setAppState(response.statusText))
     }
 
     const handleClick = ()=>{
