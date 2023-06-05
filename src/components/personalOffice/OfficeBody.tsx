@@ -1,7 +1,10 @@
+import EmptyOffice from "./EmptyOffice/EmptyOffice";
 
 
-const officeBody = () =>{
-    return(<div></div>)
+const OfficeBody = () =>{
+    return(<div>
+        <EmptyOffice/>
+    </div>)
 }
 
-export default officeBody()
+export default OfficeBody

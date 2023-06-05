@@ -4,13 +4,13 @@ import {useState, useEffect} from 'react';
 const Documentation = () =>{
     const [appState, setAppState] = useState('12345');
 
-    const text = async (email:string,password:string) =>{
+    const text = async () =>{
         setAppState("poehali")
-        axios.post("192.168.0.104:3000/api/users",{email, password}).then((response) => setAppState(response.statusText))
+        axios.get("192.168.0.104:3000/api/users", {headers:{"Content-Type":"application/json"}}).then((response) => setAppState(response.statusText))
     }
 
     const handleClick = ()=>{
-        text("12345","12312312");
+        text().then();
     }
 
     return(<div>
