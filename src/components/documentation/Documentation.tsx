@@ -6,7 +6,7 @@ const Documentation = () =>{
 
     const text = async (email:string,password:string) =>{
         setAppState("poehali")
-        axios.post("api/users",{email, password}).then((response) => setAppState(response.statusText))
+        axios.post("192.168.0.104:3000/api/users",{email, password}).then((response) => setAppState(response.statusText))
     }
 
     const handleClick = ()=>{
