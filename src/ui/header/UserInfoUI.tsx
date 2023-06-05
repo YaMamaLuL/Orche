@@ -11,7 +11,7 @@ const userInfoUI = (props:userInfoProps)=> {
         return(<NavLink className={styles.userName} to="/personaloffice">{props.userName}</NavLink>)
     }
     else{
-        return(<div><button className={styles.logLink}>вход</button><NavLink className={styles.regLink} to="/registration">регистрация</NavLink></div>)
+        return(<div className={styles.userButtons}><button className={styles.logLink}>вход</button><NavLink className={styles.regLink} to="/registration">регистрация</NavLink></div>)
     }
 }
 

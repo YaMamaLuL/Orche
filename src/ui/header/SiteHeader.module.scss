@@ -31,11 +31,11 @@ $main-color: #2D9275;
     .logLink{
       font-size: 20px;
       font-family: MullerRegular;
-      margin-right: 4%;
+      margin-right: 1.4vw;
       text-decoration: none;
       color:white;
       border-radius: 10px;
-      margin-top: -0.5%;
+      margin-top: -0.5vh;
       padding: 5px 10px 7px 10px;
       border:1px solid $main-color;
       background-color: $main-color;
@@ -63,7 +63,10 @@ $main-color: #2D9275;
 }
 
 .userName{
-  font-family: MullerRegular;
+  font-family: MullerRegular;border:1px solid transparent;
+  padding:3px;
+  border-radius: 5px;
+  margin-top: -0.5vh;
   font-size: 20px;
   color: $main-color;
   text-decoration: none;
@@ -71,6 +74,8 @@ $main-color: #2D9275;
 }
 
 .userName:hover{
-  margin-bottom: -3px;
-  border-bottom: 3px solid #444444;
+  border-color: #444444;
 }
+
+
+div.userButtons{display:flex; flex-direction: row; justify-content: center; vertical-align: center}
