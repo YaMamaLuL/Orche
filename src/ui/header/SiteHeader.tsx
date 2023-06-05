@@ -2,13 +2,14 @@ import logo from "../../imgs/logo.svg"
 import {NavLink} from "react-router-dom";
 import LinkButtons from "./LinkButtons";
 import styles from "./SiteHeader.module.scss"
+import UserInfoUI from "./UserInfoUI";
 
 type userInfoProps = {
     isLogged:boolean;
     userName: string;
 }
 
-const SiteHeader = ({isLogged, userName} : userInfoProps) => {
+const SiteHeader = (props : userInfoProps) => {
     return(
         <div className={styles.headerWrapper}>
             <NavLink to="/home" className={styles.anchor}><img src={logo} alt="mainlogo" width="100%"/></NavLink>
@@ -16,8 +17,7 @@ const SiteHeader = ({isLogged, userName} : userInfoProps) => {
                 {LinkButtons.map(item => (
                     <NavLink className={styles.link} to={item.ref}>{item.title}</NavLink>
                 ))}
-                <button className={styles.logLink}>вход</button>
-                <NavLink className={styles.regLink} to="/registration">регистрация</NavLink>
+                <UserInfoUI isLogged={props.isLogged} userName={props.userName}/>
             </div>
         </div>
     )
