@@ -22,7 +22,7 @@ const Registration = () =>{
                     <input className={styles.lastInput}/>
                     <button>Регистрейшон</button>
                 </form>
-                <h3>Или воспользуйтесь</h3>
+                <h3 className={styles.socMediaH}>Или воспользуйтесь</h3>
                 <div className={styles.socialMedias}>
                     <img title="will be added later" src={yandexLogo} width="6%" alt="socialMediaLogo"/>
                     <img title="will be added later" src={googleLogo} width="6%" alt="socialMediaLogo"/>

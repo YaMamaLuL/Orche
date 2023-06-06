@@ -8,8 +8,8 @@ const LinkButtons = [
        ref: "/blog"
     },
     {
-        title: "заглушка",
-        ref: "/*"
+        title: "цены",
+        ref: "/prices"
     }
 ]
 

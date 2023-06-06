@@ -9,9 +9,9 @@ $main-color: #2D9275;
   height: 83vh;
 
   .regForm {
-    width: 35vw;
+    width: 30vw;
     height: 60vh;
-    border: 2px solid #444444;
+    border: 2px solid #C9C9C9;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -19,17 +19,20 @@ $main-color: #2D9275;
     align-items: center;
 
     h3 {
-      font-family: MullerMedium;
+      font-family: MullerRegular;
       font-size: 2.5vh;
-      border-bottom: 1px solid #444444;
-      margin-top: -1.5vh;
-      margin-bottom: 1vh;
+      border-bottom: 2px solid #C9C9C9;
+      margin-top: -1.8vh;
+      margin-bottom: 0vh;
+      padding-left: 5.1vw;
+      padding-right: 5.1vw;
+      padding-bottom: 2vh;
     }
 
     p {
       font-family: MullerRegular;
       font-size: 2vh;
-      margin-left: 8.3vw;
+      margin-left: 6vw;
       align-self: start;
 
       span {
@@ -54,7 +57,7 @@ $main-color: #2D9275;
     }
 
     input {
-      border: 1px solid #444444;
+      border: 2px solid #C9C9C9;
       border-radius: 5px;
       width: 18vw;
       height: 3vh;
@@ -68,15 +71,15 @@ $main-color: #2D9275;
 }
 
 h3{
-  font-family: MullerMedium;
+  font-family: "MullerRegular";
   margin-bottom: -1vh;
   color: $main-color;
-  color:#444444;
+  color:black;
 }
 
 .socialMedias{
-  height: 9vh;
-  border: 2px solid #444444;
+  height: 6vh;
+  border: 2px solid #C9C9C9;
   border-radius: 10px;
   width: 25vw;
   margin-top:4vh;
@@ -86,7 +89,7 @@ h3{
 
   img{
     cursor: pointer;
-    padding: 1px;
+    padding: 7px;
     border-radius: 10px;
     width: 4vw;
   }

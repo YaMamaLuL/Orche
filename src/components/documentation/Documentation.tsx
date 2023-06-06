@@ -1,12 +1,12 @@
 import axios from "axios";
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 const Documentation = () =>{
     const [appState, setAppState] = useState('12345');
 
     const text = async () =>{
         setAppState("poehali")
-        axios.post("http://192.168.0.104:3000/api/users", {headers:{accept: "application/json"}, 'Content-Type':"application/json"}).then((response) => setAppState(response.statusText)).catch((error) => console.log(error))
+        axios.get("192.168.0.104:3000/api/users", {headers:{"Content-Type":"application/json"}}).then((response) => setAppState(response.statusText))
     }
 
     const handleClick = ()=>{
