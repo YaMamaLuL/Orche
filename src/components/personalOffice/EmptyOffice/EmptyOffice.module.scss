@@ -1,3 +1,55 @@
-.EmptyOfficeWrapper{
+$main-color:#2D9275;
+$elColor: #2B7362;
 
+.emptyOfficeWrapper{
+  margin: 24vh 0;
+  background-color: $main-color;
+  border-radius: 10px;
+  height:30vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p{
+    font-family: MullerMedium;
+    font-size: 4vh;
+    color: white;
+    margin-top: 0vh;
+    margin-bottom: 6vh;
+  }
+
+  input{
+    border: 1px solid $elColor;
+    border-radius: 20px;
+    background-color: $elColor;
+    height:5vh;
+    width: 35vw;
+    font-size: 2vh;
+  }
+
+  input:focus{
+    border:1px solid white;
+    outline: none;
+  }
+
+  button{
+    margin-top: 3vh;
+    color:black;
+    font-family: MullerRegular;
+    font-size: 2vh;
+    border:1px solid black;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+
+  button:focus{
+    background-color: $elColor;
+    color: white;
+  }
 }

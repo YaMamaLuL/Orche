@@ -8,7 +8,7 @@
 .formWrapper .loginForm {
   width: 25vw;
   height: 50vh;
-  border: 2px solid #444444;
+  border: 2px solid #C9C9C9;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -19,11 +19,12 @@
   margin-bottom: 2vh;
 }
 .formWrapper .loginForm h3 {
-  font-family: "MullerMedium";
-  border-bottom: 1px solid black;
+  font-family: "MullerRegular";
+  padding: 0 2.5vw 2vh 2.6vw;
+  border-bottom: 2px solid #C9C9C9;
   font-size: 2.5vh;
   margin-top: 0;
-  margin-bottom: 3vh;
+  margin-bottom: 2.8vh;
   color: #444444;
 }
 .formWrapper .loginForm p {
@@ -38,7 +39,7 @@
 .formWrapper .loginForm input {
   width: 20vw;
   height: 3vh;
-  border: 1px solid #444444;
+  border: 2px solid #C9C9C9;
   border-radius: 5px;
 }
 .formWrapper .loginForm button {
@@ -59,8 +60,8 @@
 }
 
 .socialMedias {
-  height: 9vh;
-  border: 2px solid #444444;
+  height: 6vh;
+  border: 2px solid #C9C9C9;
   border-radius: 10px;
   width: 25vw;
   margin-top: 4vh;
@@ -70,7 +71,7 @@
 }
 .socialMedias img {
   cursor: pointer;
-  padding: 1px;
+  padding: 7px;
   border-radius: 10px;
   width: 4vw;
 }
