@@ -1,0 +1,65 @@
+.officeWrapper{
+  margin-top: 2vh;
+  border:2px solid #C9C9C9;
+  border-radius: 10px;
+  padding: 0px 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1{
+    font-family: MullerMedium;
+    color: #444444;
+    font-size: 5vh;
+  }
+
+  p{
+    font-family: MullerRegular;
+    font-size: 3vh;
+    color: #444444;
+    white-space: nowrap;
+  }
+
+  span{
+    font-family: MullerRegular;
+    font-size: 3vh;
+    color: #444444;
+    white-space: nowrap;
+    margin-top: 6vh;
+  }
+
+  a{
+    padding:2vh 6vw;
+    border:1px solid transparent;
+    margin-top:5vh;
+    border-radius: 10px;
+    font-size: 3vh;
+    color:white;
+    background-color: #2D9275;
+    text-decoration: none;
+    justify-self: flex-end;
+    margin-bottom: 5vh;
+  }
+
+  a:hover{
+    border: 1px solid #2D9275;
+    background-color: white;
+    color: black;
+  }
+
+  button{
+    padding: 1.2vh 2.5vw;
+    color: white;
+    border:2px solid crimson;
+    border-radius: 10px;
+    background-color: crimson;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+
+  button:focus{
+    background-color: #F56991;
+  }
+}

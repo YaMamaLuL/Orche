@@ -1,21 +1,22 @@
-import axios from "axios";
-import {useState} from 'react';
+import SiteHeader from "../../ui/header/SiteHeader";
+import SiteFooter from "../../ui/footer/SiteFooter";
+import styles from "./Documentation.module.scss"
 
 const Documentation = () =>{
-    const [appState, setAppState] = useState('12345');
-
-    const text = async () =>{
-        setAppState("poehali")
-        axios.get("192.168.0.104:3000/api/users", {headers:{"Content-Type":"application/json"}}).then((response) => setAppState(response.statusText))
-    }
-
-    const handleClick = ()=>{
-        text().then();
-    }
-
     return(<div>
-        <p>{appState}</p>
-        <button onClick={handleClick}>click me</button>
+        <SiteHeader isLogged={false} userName={''}/>
+        <div className={styles.documentationWrapper}>
+            <h1>Краткое руководство по началу пользования приложением</h1>
+            <h2>Для создания собственного оркестратора, вам необходимо выполнить 3 простых шага:</h2>
+            <ul>
+                <li>Зарегистрируйтесь в приложении</li>
+                <li>Укажите ссылку на приложение в системе контроля версий Git в специальную форму в личном кабинете </li>
+                <li>Нажмите на кнопку "Запустить оркестратор"</li>
+            </ul>
+            <h1>Рассмотрим каждый из шагов более детально:</h1>
+            <p>Для регистрации,</p>
+        </div>
+        <SiteFooter/>
     </div>)
 }
 

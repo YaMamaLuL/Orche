@@ -1,0 +1,25 @@
+.documentationWrapper{
+  margin: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1{
+    font-family: MullerMedium;
+    font-size: 5vh;
+    align-self: center;
+    color: #2D9275;
+  }
+
+  h2{
+    margin-bottom: 0;
+    font-family: MullerMedium;
+    font-size: 3vh;
+  }
+
+  ul{
+    li{
+      margin-left: 0;
+    }
+  }
+}

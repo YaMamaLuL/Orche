@@ -24,6 +24,7 @@ $elColor: #2B7362;
     border: 1px solid $elColor;
     border-radius: 20px;
     background-color: $elColor;
+    color: white;
     height:5vh;
     width: 35vw;
     font-size: 2vh;
@@ -41,7 +42,8 @@ $elColor: #2B7362;
     font-size: 2vh;
     border:1px solid black;
     border-radius: 10px;
-    background-color: white;
+    background-color: #C9C9C9;
+    min-height:30px;
   }
 
   button:hover{

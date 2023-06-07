@@ -6,6 +6,7 @@ import LogIn from "./components/login/LogIn";
 import Registration from "./components/registration/Registration";
 import Blog from "./components/blog/Blog";
 import PersonalOffice from "./components/personalOffice/PersonalOffice";
+import Prices from "./components/prices/Prices"
 
 const App = () => {
     const routes = [
@@ -36,6 +37,10 @@ const App = () => {
         {
             path: "/personaloffice",
             element: <PersonalOffice/>
+        },
+        {
+            path: "/prices",
+            element: <Prices/>
         },
         {
             path: "/*",
