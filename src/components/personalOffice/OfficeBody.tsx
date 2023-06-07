@@ -98,7 +98,7 @@ const Office = () => {
 }
 
 const OfficeBody = (props:OfficeProps) =>{
-    if (props.hasProjects){
+    if (false){
         return(<div className={styles.OfficeWrapper}>
             <Office/>
         </div>)

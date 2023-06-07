@@ -15,8 +15,9 @@ const LogIn = () =>{
                     <p>Адрес электронной почты <span>*</span></p>
                     <input className={styles.mailInput}/>
                     <p>Пароль <span>*</span></p>
-                    <input/>
+                    <input type="password"/>
                     <button>Войти</button>
+                    <p>Ошибка при заполнении поля<br/> "Адрес электронной почты"</p>
                 </form>
                 <h3>Или воспользуйтесь</h3>
                 <div className={styles.socialMedias}>

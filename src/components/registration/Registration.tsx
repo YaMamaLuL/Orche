@@ -20,7 +20,7 @@ const Registration = () =>{
                     <input/>
                     <p>Повторите пароль <span>*</span></p>
                     <input className={styles.lastInput}/>
-                    <button>Регистрейшон</button>
+                    <button>Зарегистрироваться</button>
                 </form>
                 <h3 className={styles.socMediaH}>Или воспользуйтесь</h3>
                 <div className={styles.socialMedias}>
