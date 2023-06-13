@@ -5,6 +5,11 @@ import yandexLogo from "../../imgs/yandexLogo.svg"
 import gitLogo from "../../imgs/githubLogo.svg"
 import googleLogo from "../../imgs/googleLogo.svg"
 
+type userInfo = {
+    login:string,
+    password:string;
+}
+
 const LogIn = () =>{
     return(
         <div className={styles.logWrapper}>
@@ -17,7 +22,6 @@ const LogIn = () =>{
                     <p>Пароль <span>*</span></p>
                     <input type="password"/>
                     <button>Войти</button>
-                    <p>Ошибка при заполнении поля<br/> "Адрес электронной почты"</p>
                 </form>
                 <h3>Или воспользуйтесь</h3>
                 <div className={styles.socialMedias}>
