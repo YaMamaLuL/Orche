@@ -4,11 +4,9 @@ import SiteFooter from "../../ui/footer/SiteFooter";
 import yandexLogo from "../../imgs/yandexLogo.svg"
 import gitLogo from "../../imgs/githubLogo.svg"
 import googleLogo from "../../imgs/googleLogo.svg"
+import logInButtonHandler from "./LogInButtonHandler";
+import {MouseEventHandler} from "react";
 
-type userInfo = {
-    login:string,
-    password:string;
-}
 
 const LogIn = () =>{
     return(

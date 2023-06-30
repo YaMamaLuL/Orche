@@ -8,7 +8,7 @@ const SiteFooter = () => {
             <img src={logo} alt="logoImg" className={styles.siteLogo} width="50vh"/>
             <p>нет копирайту<br/> урфу тим прожект 2023</p>
             <div className={styles.socialLinks}>{socialMediaLinks.map(item=>
-                <a href={item.ref} className={styles.anchor}>
+                <a href={item.ref} className={styles.anchor} rel="noreferrer" target="_blank">
                     <img src={item.logo} alt="soclogo" width="100%"/>
                 </a>)}</div>
         </div>
