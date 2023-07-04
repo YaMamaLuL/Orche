@@ -63,3 +63,28 @@
     background-color: #F56991;
   }
 }
+
+.projectNamesWrapper{
+  margin-top: 2vh;
+  border:2px solid #C9C9C9;
+  border-radius: 10px;
+
+  h1{
+    font-family: MullerMedium;
+    color: #444444;
+    font-size: 5vh;
+    padding: 0 0.5vh;
+  }
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    list-style-type: none;
+    align-items: center;
+
+    li{
+      padding: 0.5vh;
+    }
+  }
+}

@@ -10,7 +10,7 @@ import {useState} from "react";
 import Cookies from "universal-cookie";
 import {redirect, useNavigate} from "react-router-dom";
 
-const buttonClickHandler = async (mail:string, password:string) => {
+const loginButtonClickHandler = async (mail:string, password:string) => {
     const cookies = new Cookies()
     await axios.post("http://192.168.0.104:3000/api/auth/login",
         {email:mail, password:password},
@@ -43,7 +43,7 @@ const LogIn = () =>{
                     <input type="password" value={password} onChange={e => setPassword(e.target.value)}/>
                     <button onClick={async (event) => {
                         event.preventDefault()
-                        await buttonClickHandler(email, password)
+                        await loginButtonClickHandler(email, password)
                         navigate("/personalOffice", {replace:true})
                     }}>Войти</button>
                 </form>

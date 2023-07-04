@@ -21,12 +21,10 @@ const PersonalOffice = () =>{
             .catch((error)=>{console.log(error)})
     })
 
-    const [hasProjectsState, setHasProjectsState] = useState(false)
-
     return(
     <div>
         <SiteHeader isLogged={true} userName={email}/>
-        <OfficeBody hasProjects={hasProjectsState}/>
+        <OfficeBody/>
         <SiteFooter/>
     </div>)
 }
