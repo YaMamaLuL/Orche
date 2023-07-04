@@ -5,41 +5,45 @@ import officestyles from "./Office.module.scss"
 import axios from 'axios'
 import React, {useState} from "react";
 import Redirect from 'react-router-dom'
-interface OfficeProps {
+import Cookies from "universal-cookie";
+type OfficeProps = {
     hasProjects:boolean
 }
 
-const EmptyOffice = () =>{
-    return(
-        <div className={eoStyles.emptyOfficeWrapper}>
-            <p>Укажите ссылку на ваше приложение</p>
-            <input id="userLinkInput"/>
-            <button>Запустить оркестратор</button>
-        </div>)
-}
-
-const Office = () => {
-    return(
-        <div className={officestyles.officeWrapper}>
-            <h1>Управление приложением</h1>
-            <p>Имя проекта: {"1231"}</p>
-            <p>Состояние: {"1231"}</p>
-            <span>Ссылка на ваше приложение:</span>
-            <a href={"1231"}>{"1231"}</a>
-            <button>Остановить и удалить</button>
-        </div>
-    )
-}
-
 const OfficeBody = (props:OfficeProps) =>{
-    if (true){
+    const cookie = new Cookies()
+    const [hasProjects, setHasProjects] = useState(false)
+    const [projectName, setProjectName] = useState("")
+
+    useState(()=>{
+        axios.get("http://192.168.0.104:3000/api/projects", {headers:{
+            "accept":"application/json", "Authorization": `Bearer ${cookie.get("accessToken")}`
+            }})
+            .then((responce) =>{
+                setHasProjects(responce.data.length > 0)
+                setProjectName(responce.data[0].name)
+            })
+    })
+
+    if (hasProjects){
         return(<div className={styles.OfficeWrapper}>
-            <Office/>
+            <div className={officestyles.officeWrapper}>
+                <h1>Управление приложением</h1>
+                <p>Имя проекта: {projectName}</p>
+                <p>Состояние: {"1231"}</p>
+                <span>Ссылка на ваше приложение:</span>
+                <a href={"1231"}>{"1231"}</a>
+                <button>Остановить и удалить</button>
+            </div>
         </div>)
     }
     else{
         return(<div className={styles.OfficeWrapper}>
-            <EmptyOffice/>
+            <div className={eoStyles.emptyOfficeWrapper}>
+                <p>Укажите ссылку на ваше приложение</p>
+                <input id="userLinkInput"/>
+                <button>Запустить оркестратор</button>
+            </div>
         </div>)
     }
 }
