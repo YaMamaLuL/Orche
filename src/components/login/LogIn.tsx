@@ -41,9 +41,9 @@ const LogIn = () =>{
                     <input className={styles.mailInput} value={email} onChange={e => setEmail(e.target.value)}/>
                     <p>Пароль <span>*</span></p>
                     <input type="password" value={password} onChange={e => setPassword(e.target.value)}/>
-                    <button onClick={(event) => {
+                    <button onClick={async (event) => {
                         event.preventDefault()
-                        buttonClickHandler(email, password)
+                        await buttonClickHandler(email, password)
                         navigate("/personalOffice", {replace:true})
                     }}>Войти</button>
                 </form>
