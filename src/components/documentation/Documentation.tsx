@@ -4,7 +4,7 @@ import styles from "./Documentation.module.scss"
 
 const Documentation = () =>{
     return(<div>
-        <SiteHeader isLogged={false} userName={''}/>
+        <SiteHeader/>
         <div className={styles.documentationWrapper}>
             <h1>Краткое руководство по началу пользования приложением</h1>
             <div>

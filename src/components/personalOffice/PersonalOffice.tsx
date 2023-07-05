@@ -23,7 +23,7 @@ const PersonalOffice = () =>{
 
     return(
     <div>
-        <SiteHeader isLogged={true} userName={email}/>
+        <SiteHeader/>
         <OfficeBody/>
         <SiteFooter/>
     </div>)

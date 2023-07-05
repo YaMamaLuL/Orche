@@ -15,7 +15,7 @@ const blankNew = {
 
 const Blog = () =>{
     return(<div>
-        <SiteHeader isLogged={true} userName="bigcock"/>
+        <SiteHeader/>
         <div className={styles.blogWrapper}>
             <ul className={styles.newsData}>
                 {newsDatas.map(item =><li key="newsData"><button className={styles.test}>{item} {blankNew.title}</button></li>)}

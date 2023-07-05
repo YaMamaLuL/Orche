@@ -8,7 +8,7 @@ import Descriptions from "./DescriptionInfo";
 const Home = () =>{
     return (
         <div>
-            <SiteHeader isLogged={false} userName={"nothing"}/>
+            <SiteHeader/>
             <div className={styles.mainWrapper}>
                 <div className={styles.slogan}>
                     <p>Создайте свое приложение,<br/> а запуск оставьте на нас</p>

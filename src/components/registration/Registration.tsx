@@ -52,7 +52,7 @@ const Registration = () =>{
 
     return(
         <div className={styles.regWrapper}>
-            <SiteHeader isLogged={false} userName="nothing" />
+            <SiteHeader/>
             <div className={styles.formWrapper}>
                 <form className={styles.regForm}>
                     <h3>Регистрация</h3>

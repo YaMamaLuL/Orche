@@ -33,7 +33,7 @@ const LogIn = () =>{
 
     return(
         <div className={styles.logWrapper}>
-            <SiteHeader isLogged={false} userName="nothing" />
+            <SiteHeader/>
             <div className={styles.formWrapper}>
                 <form className={styles.loginForm}>
                     <h3>Вход в личный кабинетик</h3>

@@ -4,7 +4,7 @@ import styles from "./Prices.module.scss"
 
 const Prices = () =>{
     return<div>
-        <SiteHeader isLogged={false} userName={""}/>
+        <SiteHeader/>
         <div className={styles.wrapper}>
             <div className={styles.pricesWrapper}>
                 <h6>0 рублей/месяц</h6>
