@@ -17,7 +17,7 @@ const Home = () =>{
                 <div className={styles.infoWrapper}>
                     <h3>Как это работает?</h3>
                     <div className={styles.howItWorks}>
-                        <ul className={styles.descriptionNumerator}>{Descriptions.map(item =><li key="num">{item.id}</li>)}</ul>
+                        <ul className={styles.descriptionNumerator}>{Descriptions.map(item =><li key={item.id}>{item.id}</li>)}</ul>
                         <ul className={styles.descriptions}>
                             {Descriptions.map(item=><li key={item.id}>{item.title}</li>)}
                         </ul>

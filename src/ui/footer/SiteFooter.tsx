@@ -9,7 +9,7 @@ const SiteFooter = () => {
             <p>нет копирайту<br/> урфу тим прожект 2023</p>
             <div className={styles.socialLinks}>
                 {socialMediaLinks.map(item=>
-                <a href={item.ref} className={styles.anchor} rel="noreferrer" target="_blank">
+                <a key={item.id} href={item.ref} className={styles.anchor} rel="noreferrer" target="_blank">
                     <img src={item.logo} alt="soclogo" width="100%"/>
                 </a>)}
             </div>
