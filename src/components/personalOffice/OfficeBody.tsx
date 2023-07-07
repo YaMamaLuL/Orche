@@ -10,7 +10,7 @@ import error = Simulate.error;
 const OfficeBody = () =>{
     const cookies = new Cookies()
     const [hasProjects, setHasProjects] = useState(false)
-    const [currentService, setCurrentService] = useState("")
+    const [currentService, setCurrentService] = useState({id:"",name:"",repository:"",buildCommand: "", deployCommand: "", ip: "", port: 0, internalPort: 0, url: "", status: "", variables: {}})
     const [serviceNames, setServiceNames] = useState([{id:"",name:"", repository:""}])
     const [projectNames, setProjectNames] = useState([{id:"",name:""}])
     const [currentProject, setCurrentProject] = useState({id:"", name:""})
@@ -29,8 +29,13 @@ const OfficeBody = () =>{
     const serviceClickHandle = async (service:{id:string,name:string, repository:string}) => {
         axios.get(`http://192.168.0.104:3000/api/projects/${currentProject.id}/services/${service.id}`,
             {headers:{
-                "accept":"aзplication/json", "Authorization": `Bearer ${cookies.get("accessToken")}`
+                "accept":"application/json", "Authorization": `Bearer ${cookies.get("accessToken")}`
                 }})
+            .then((responce) => {
+                setCurrentService(responce.data)
+            })
+
+
     }
 
     const getProjectNames = async() => {
@@ -47,7 +52,7 @@ const OfficeBody = () =>{
         await axios.get(`http://192.168.0.104:3000/api/projects/${projectId}/services`,
             {headers:{"accept": "application/json", "Authorization":`Bearer ${cookies.get("accessToken")}`}}).
         then((responce)=>{return responce.data})
-            .catch((error) => {console.log(error); return [{id:0,name:"nothing",status:error}]})
+            .catch((error) => {console.log(error); return [{id:"",name:"nothing",status:error}]})
     }
 
     useEffect(()=>{
@@ -74,17 +79,20 @@ const OfficeBody = () =>{
                     <h1>Приложение</h1>
                     <ul>
                         {currentProject.name !== ""
-                            ? serviceNames.map((item,key) => <li key={key}><button>{item.name}</button></li>)
+                            ? serviceNames.map((item,key) => <li key={key}><button onClick={async (event)=>{
+                                event.preventDefault()
+                                await serviceClickHandle(item)
+                            }}>{item.name}</button></li>)
                             : <li><p>Список приложений пуст</p></li>}
                         <li key={serviceNames.length+1}><button>Создать приложение</button></li>
                     </ul>
                 </div>
                 <div className={officestyles.officeWrapper}>
                     <h1>Управление приложением</h1>
-                    <p>Имя приложения: {currentService}</p>
-                    <p>Состояние: {"1231"}</p>
+                    <p>Имя приложения: {currentService.name !== ""? currentService.name: "nothing"}</p>
+                    <p>Состояние: {currentService.status !== ""? currentService.status: "nothing"}</p>
                     <span>Ссылка на ваше приложение:</span>
-                    <a href={"1231"}>{"1231"}</a>
+                    <a href={currentService.url}>{currentService.url !== ""? currentService.url: "nothing"}</a>
                     <button>Остановить и удалить</button>
                 </div>
             </div>)
