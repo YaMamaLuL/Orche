@@ -84,11 +84,24 @@
     align-items: center;
 
     li{
-      padding: 0.5vh;
-      font-family: MullerRegular;
-      font-size: 2.5vh;
-      margin-bottom: 1vh;
-      cursor: pointer;
+      p{
+        color: palevioletred;
+        font-family: MullerRegular;
+        font-size: 2.5vh;
+        cursor: default;
+        margin-top:0.5vh;
+        margin-bottom: 1vh;
+      }
+
+      button{
+        padding: 0.5vh;
+        font-family: MullerRegular;
+        font-size: 2.5vh;
+        margin-bottom: 1vh;
+        cursor: pointer;
+        border: 1px solid transparent;
+        background-color: white;
+      }
     }
   }
 }
