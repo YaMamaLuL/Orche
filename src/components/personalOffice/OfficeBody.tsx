@@ -4,8 +4,6 @@ import officestyles from "./Office.module.scss"
 import axios from 'axios'
 import React, {useEffect, useState} from "react";
 import Cookies from "universal-cookie";
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
 
 const OfficeBody = () =>{
     const cookies = new Cookies()
@@ -34,8 +32,6 @@ const OfficeBody = () =>{
             .then((responce) => {
                 setCurrentService(responce.data)
             })
-
-
     }
 
     const getProjectNames = async() => {
@@ -48,17 +44,11 @@ const OfficeBody = () =>{
             .catch((error) => {return [{id:"", name:""}]})
     }
 
-    const getServiceNames = async (projectId:string) => {
-        await axios.get(`http://192.168.0.104:3000/api/projects/${projectId}/services`,
-            {headers:{"accept": "application/json", "Authorization":`Bearer ${cookies.get("accessToken")}`}}).
-        then((responce)=>{return responce.data})
-            .catch((error) => {console.log(error); return [{id:"",name:"nothing",status:error}]})
-    }
-
     useEffect(()=>{
       getProjectNames()
       setHasProjects(projectNames.length > 0)
     },[])
+
 
     if (hasProjects){
         return(
