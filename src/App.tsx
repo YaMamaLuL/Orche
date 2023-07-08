@@ -7,6 +7,7 @@ import Registration from "./components/registration/Registration";
 import Blog from "./components/blog/Blog";
 import PersonalOffice from "./components/personalOffice/PersonalOffice";
 import Prices from "./components/prices/Prices"
+import CreateProjectForm from "./components/personalOffice/CreateProjectForm";
 
 const App = () => {
     const routes = [
@@ -45,6 +46,10 @@ const App = () => {
         {
             path: "/*",
             element: <div>404..</div>
+        },
+        {
+            path: "form",
+            element: <CreateProjectForm updateProjectsList={()=>{}} changeStateFunc={()=>{}}/>
         }
     ];
 

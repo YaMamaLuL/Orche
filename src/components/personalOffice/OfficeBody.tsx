@@ -4,6 +4,7 @@ import officestyles from "./Office.module.scss"
 import axios from 'axios'
 import React, {useEffect, useState} from "react";
 import Cookies from "universal-cookie";
+import CreateProjectForm from "./CreateProjectForm";
 
 const OfficeBody = () =>{
     const cookies = new Cookies()
@@ -12,6 +13,8 @@ const OfficeBody = () =>{
     const [serviceNames, setServiceNames] = useState([{id:"",name:"", repository:""}])
     const [projectNames, setProjectNames] = useState([{id:"",name:""}])
     const [currentProject, setCurrentProject] = useState({id:"", name:""})
+    const [showCreateProjectForm, setShowCreateProjectForm] = useState(false)
+
 
     const projectClickHandle = async (project: {id:string, name:string}) => {
         setCurrentProject(project)
@@ -50,19 +53,24 @@ const OfficeBody = () =>{
     },[])
 
 
-    if (hasProjects){
+    if (true){
         return(
             <div className={styles.OfficeWrapper}>
                 <div className={officestyles.projectNamesWrapper}>
                     <h1>Проект</h1>
                     <ul>
-                        {projectNames[0].id !== ""
+                        {projectNames.length > 0 && projectNames[0].id !== ""
                             ? projectNames.map((item, key) => <li key={key}><button onClick={async (event) => {
                                 console.log(item.id)
                                 await projectClickHandle(item)
                                 event.preventDefault()}}>{item.name}</button></li>)
-                            : <p>Создайте свой первый проект!</p>}
-                        <li key={projectNames.length+1}><button>Создать проект</button></li>
+                            : <li><p>Список проектов пуст</p></li>}
+                        <li key={projectNames.length+1}><button onClick={async (event) => {
+                            event.preventDefault();
+                            setShowCreateProjectForm(true);
+                            await getProjectNames()}
+                        }>Создать проект</button></li>
+                        <li>{showCreateProjectForm? <CreateProjectForm changeStateFunc={setShowCreateProjectForm} updateProjectsList={getProjectNames}/>: <div/>}</li>
                     </ul>
                 </div>
                 <div className={officestyles.projectNamesWrapper}>
