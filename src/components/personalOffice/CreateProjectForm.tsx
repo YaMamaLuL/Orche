@@ -20,7 +20,7 @@ const CreateProjectForm = (state: changeState) =>{
         <div className={styles.createFormWrapper}>
             <span>Введите название проекта</span>
             <input value={projectName} onChange={(e) => {setProjectName(e.target.value)}}/>
-            <button onClick={(event) => {event.preventDefault(); createButtonHandler(); state.changeStateFunc(false); state.updateProjectsList()}}>Создать проект</button>
+            <button onClick={async (event) => {event.preventDefault(); await createButtonHandler(); state.changeStateFunc(false); state.updateProjectsList()}}>Создать проект</button>
         </div>
     )
 }

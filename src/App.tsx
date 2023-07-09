@@ -7,7 +7,7 @@ import Registration from "./components/registration/Registration";
 import Blog from "./components/blog/Blog";
 import PersonalOffice from "./components/personalOffice/PersonalOffice";
 import Prices from "./components/prices/Prices"
-import CreateProjectForm from "./components/personalOffice/CreateProjectForm";
+import CreateServiceForm from "./components/personalOffice/CreateServiceForm";
 
 const App = () => {
     const routes = [
@@ -49,7 +49,7 @@ const App = () => {
         },
         {
             path: "form",
-            element: <CreateProjectForm updateProjectsList={()=>{}} changeStateFunc={()=>{}}/>
+            element: <CreateServiceForm projectId={""} updateServiceList={()=>{}} changeStateFunc={()=>{}}/>
         }
     ];
 

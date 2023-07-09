@@ -5,6 +5,7 @@ import axios from 'axios'
 import React, {useEffect, useState} from "react";
 import Cookies from "universal-cookie";
 import CreateProjectForm from "./CreateProjectForm";
+import CreateServiceForm from "./CreateServiceForm";
 
 const OfficeBody = () =>{
     const cookies = new Cookies()
@@ -14,7 +15,7 @@ const OfficeBody = () =>{
     const [projectNames, setProjectNames] = useState([{id:"",name:""}])
     const [currentProject, setCurrentProject] = useState({id:"", name:""})
     const [showCreateProjectForm, setShowCreateProjectForm] = useState(false)
-
+    const [showCreateServiceForm, setShowCreateServiceForm] = useState(false)
 
     const projectClickHandle = async (project: {id:string, name:string}) => {
         setCurrentProject(project)
@@ -47,6 +48,13 @@ const OfficeBody = () =>{
             .catch((error) => {return [{id:"", name:""}]})
     }
 
+    const getServiceNames = async () => {
+        await axios.get(`http://192.168.0.104:3000/api/projects/${currentProject}/services`,
+            {headers:{"accept":"application/json", "Authorization":`Bearer ${cookies.get("accessToken")}`}})
+            .then((responce)=>{setServiceNames(responce.data)})
+            .catch((error) => {console.log(error)})
+    }
+
     useEffect(()=>{
       getProjectNames()
       setHasProjects(projectNames.length > 0)
@@ -67,8 +75,7 @@ const OfficeBody = () =>{
                             : <li><p>Список проектов пуст</p></li>}
                         <li key={projectNames.length+1}><button onClick={async (event) => {
                             event.preventDefault();
-                            setShowCreateProjectForm(true);
-                            await getProjectNames()}
+                            showCreateProjectForm?setShowCreateProjectForm(false):setShowCreateProjectForm(true);}
                         }>Создать проект</button></li>
                         <li>{showCreateProjectForm? <CreateProjectForm changeStateFunc={setShowCreateProjectForm} updateProjectsList={getProjectNames}/>: <div/>}</li>
                     </ul>
@@ -82,7 +89,11 @@ const OfficeBody = () =>{
                                 await serviceClickHandle(item)
                             }}>{item.name}</button></li>)
                             : <li><p>Список приложений пуст</p></li>}
-                        <li key={serviceNames.length+1}><button>Создать приложение</button></li>
+                        <li key={serviceNames.length+1}><button onClick={(event) => {
+                            event.preventDefault()
+                            showCreateServiceForm? setShowCreateServiceForm(false): setShowCreateServiceForm(true)
+                        }}>Создать приложение</button></li>
+                        <li>{showCreateServiceForm? <CreateServiceForm changeStateFunc={setShowCreateServiceForm} updateServiceList={setServiceNames} projectId={currentProject.id}/>: <div/>}</li>
                     </ul>
                 </div>
                 <div className={officestyles.officeWrapper}>
