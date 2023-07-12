@@ -93,7 +93,7 @@ const OfficeBody = () =>{
                             event.preventDefault()
                             showCreateServiceForm? setShowCreateServiceForm(false): setShowCreateServiceForm(true)
                         }}>Создать приложение</button></li>
-                        <li>{showCreateServiceForm? <CreateServiceForm changeStateFunc={setShowCreateServiceForm} updateServiceList={setServiceNames} projectId={currentProject.id}/>: <div/>}</li>
+                        <li>{showCreateServiceForm? <CreateServiceForm changeStateFunc={setShowCreateServiceForm} updateServiceList={getServiceNames} projectId={currentProject.id}/>: <div/>}</li>
                     </ul>
                 </div>
                 <div className={officestyles.officeWrapper}>

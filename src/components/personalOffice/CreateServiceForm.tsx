@@ -12,7 +12,7 @@ const CreateServiceForm = (state: changeState) => {
 
     const createButtonHandler = async () => {
         axios.post(`http://192.168.0.104:3000/api/projects/${state.projectId}/services`,
-            {"name":serviceName, "repository":repoUrl, "port":port},
+            {"name":serviceName, "repository":repoUrl, "internalPort":port},
             {headers:{"accept": "application/json", "Authorization": `Bearer ${cookies.get("accessToken")}`, "Content-Type": "application/json"}})
             .then((responce)=>{console.log("Запрос на создание проекта отправлен успешно")})
             .catch((error) => {console.log("Запрос на создание проекта ошибку дал")})
@@ -24,7 +24,7 @@ const CreateServiceForm = (state: changeState) => {
             <input value={serviceName} onChange={(e) => {setServiceName(e.target.value)}}/>
             <span>Введите репозиторий приложения</span>
             <input value={repoUrl} onChange={(e) => {setRepoUrl(e.target.value)}}/>
-            <button onClick={(event) => {event.preventDefault(); createButtonHandler(); state.changeStateFunc(false); state.updateServiceList()}}>Создать проект</button>
+            <button onClick={async (event) => {event.preventDefault(); await createButtonHandler(); state.changeStateFunc(false); state.updateServiceList()}}>Создать проект</button>
         </div>
     )
 }
